@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="J Fowler" />
+    <title>Can i type</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- Third party plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/bstrap_styles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Can i type</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#othertests">Other tests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#faqs">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <section class="page-section" id=""> -->
+
+    <div class="container-fluid mainTypingPage bg-transparent">
+
+        <div class="modal fade" id="warningNoKeyb" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Physical keyboard not detected!</h5>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button> -->
+                    </div>
+                    <div class="modal-body">
+                        <p>We've detected that you are using a device without a physical keyboard.</p>
+                        <p>The tests on this site are designed for use with a standard QWERTY English keyboard, and cannot be conducted using touch screen keyboards.</p>
+                        <p>You should switch to another device such as a computer or laptop with a physical keyboard.</p><br>
+                        <p style="text-align:center;"><a class="myNavButtons btn btn-info btn-lg js-scroll-trigger back">Back</a></p>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="warningErrors" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Too many errors</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Please focus on your accuracy. Click Restart to take the attempt again.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section">
+          <div class="container"> 
+             <div class="row buffer">
+                <div class="col-sm-3 col-xs-12 text-center ">
+                    <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger back">Back</a>
+                </div>
+                <div class="col-sm-3 col-xs-12 text-center ">
+                    <div class="dropdown" id="instructionsPanel">
+                        <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger dropdown-toggle " href="#"
+                            role="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Instructions
+                        </a>
+                        <div class="dropdown-menu"">
+                            <div class="dropdown-item" >
+                                <div class="row">
+                                    <div class="text-wrap" style="width: 18rem;">
+                                        To the right of the main window, the following is visible at the start of a test:
+                                        <ul>
+                                            <li>test type</li>
+                                            <li>candidate reference</li>
+                                            <li>timing duration</li>
+                                    
+                                        </ul>
+                                        As you type, you will see the latest:
+                                        <ul>
+                                            <li>error count as characters incorrectly typed and uncorrected</li>
+                                            <li>speed in words per minute (WPM)</li>
+                                        </ul>
+                                        At the end of a test, you will also see:
+                                        <ul>
+                                            <li>time left</li>
+                                            <li>accuracy (%)</li>
+                                            <li>final WPM</li>
+                                            <li>date and time stamp</li>
+                                        </ul>
+                                        <p>Use all the designated time to type as much as you can.</p><p class="mt-2">The blue cursor
+                                        indicates the current character to type and the timer starts when you press the
+                                        first key.</p><p class="mt-2">The test ends when you finish typing all the text, or when the timer
+                                        reaches zero, whichever comes first.</p><p class="mt-2">To set accessibility preferences, choose
+                                        Settings.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-xs-12 text-center">
+                    <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger " id="btnRestart">Restart</a>
+                </div>
+                <div class="col-sm-3 col-xs-12 text-center">
+                    <div class="dropdown"  id="settingsPanel">
+                        <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger dropdown-toggle " href="#"
+                            role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Settings
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item">
+                                <div class="settings-panel">
+                                    <div>
+                                        <label class="font-weight-bold"">Choose a font size:</label>
+                                        
+                                        <div class="row">
+                                                <ul class="list-unstyled" style="display: inline-flex;">
+                                                    <li class="list-group-item col-4">
+                                                        <div class="fontShowSize" style="font-size: 16px">A</div>
+                                                        <a>Small</a>
+                                                    </li> 
+                                                    <li class="active list-group-item col-4">
+                                                        <div class="fontShowSize" style="font-size: 20px">A</div>
+                                                        <a>Normal</a>
+                                                    <li class="list-group-item col-4">
+                                                        <div class="fontShowSize" style="font-size: 24px">A</div>
+                                                        <a>Large</a>
+                                                    </li> 
+                                                </ul>
+                                        </div>
+
+                                        <hr>
+
+                                        <label class="font-weight-bold"">Choose a font type:</label>
+                                       
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                            <ul class="list-unstyled">
+                                                <li class="active list-group-item" style="font-family: 'droid_sans_monoregular'">
+                                                    <a>Droid Sans Mono</a>
+                                                </li>
+                                                <li class="fontShowType list-group-item" style="font-family: 'ubuntu_mono'">
+                                                    <a>Ubuntu Mono</a>
+                                                </li>
+                                                <li class="fontShowType list-group-item" style="font-family: 'courier_prime'">
+                                                    <a>Courier Prime</a>
+                                                </li>
+                                                <li class="fontShowType list-group-item" style="font-family: 'PT_mono'">
+                                                    <a>PT Mono</a>
+                                                </li>
+                                                <li class="fontShowType list-group-item" style="font-family: 'source_code_pro'">
+                                                    <a>Source Code Pro</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div> 
+        </div> 
+
+        <div class="container-fluid ">
+
+            <div class="row">
+                <div class="col-8 offset-md-1">
+                    <div class="textOverInview" tabindex="-1" aria-hidden="true">
+                        <div class="inview">
+                            <div class="typable">
+                                <div id="typingContent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2 card">
+                   
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2">Test type</div>
+                            <div class="col-lg-12 h3 text-center" id="testref"></div>
+                        </div>
+                        <div class="row form-group stats hideCandRef">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2">Cand. ref</div>
+                            <div class="col-lg-12 h3 text-center" id="employeeID"></div>
+                        </div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingTiming">Timing</div>
+                            <div class="col-lg-12 text-center" id="countdowntimer">
+                                <span id="timer" class="h3"></span>
+                            </div>
+                        </div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2">Speed</div>
+                            <div class="col-lg-12 h3 text-center" id="speed"><sup style="font-size: 1rem;">wpm</sup></div>
+                        </div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingErrorCnt">Errors</div>
+                            <div class="col-lg-12 h3 text-center" id="noOfErrors"></div>
+                        </div>
+
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingRealAcc">Accuracy</div>
+                            <div class="col-lg-12 h3 text-center" id="realAcc"></div>
+                        </div>
+
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingDate">Date</div>
+                            <div class="col-lg-12 h3 text-center" id="date"></div>
+                        </div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingTime">Time</div>
+                            <div class="col-lg-12 h3 text-center" id="time"></div>
+                        </div>
+                        <div class="row" style="justify-content: center; padding-bottom: 1rem;">
+                                    <a class="printBtn myNavButtons btn btn-info btn-lg js-scroll-trigger" id="print1"
+                            onclick="window.print()"">Print/Save</a>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <textarea id="typingInput" class="invisibleInput" autocomplete="off" autocorrect="off" autocapitalize="off"
+                            autofocus="" onpaste="return false;" oncut="return false;" spellcheck="false"></textarea>
+                    </div>
+
+                    <!-- Footer-->
+                    <footer class="py-5">
+
+                    </footer>
+                    <script src="js/jquery-3.4.1.min.js"></script>
+                    <script src="js/jquery-ui.min.js"></script>
+                    <script src="js/chance.min.js"></script>
+                    <script src="js/jQuery.countdownTimer.min.js"></script>
+                        <!-- <script src="js/typing.min.js"></script> -->
+    <script src="js/typing.js"></script>
+
+                    <script
+                        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+                    <!-- Third party plugin JS-->
+                    <script
+                        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+                    <script
+                        src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+                    <!-- Core theme JS-->
+                    <script src="js/bstrap_scripts.js"></script>
+
+                    <script>
+                        $(document).ready(function () {
+                            $('#mainNav').hide();
+                            var test = sessionStorage.getItem("test");
+                            var time = sessionStorage.getItem("time");
+                            var candRef = sessionStorage.getItem("candRef");
+                            typing(test, time, candRef);
+                           
+
+                            $(".back").on("click", function () {
+                                sessionStorage.clear();
+                                window.location.href = 'index'; //after .htaccess file sorted delete the append .html
+
+                            });
+
+                            var hasTouchScreen = false;
+                            if ("maxTouchPoints" in navigator) {
+                                hasTouchScreen = navigator.maxTouchPoints > 0;
+                            } else if ("msMaxTouchPoints" in navigator) {
+                                hasTouchScreen = navigator.msMaxTouchPoints > 0;
+                            } else {
+                                var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+                                if (mQ && mQ.media === "(pointer:coarse)") {
+                                    hasTouchScreen = !!mQ.matches;
+                                } else if ('orientation' in window) {
+                                    hasTouchScreen = true; // deprecated, but good fallback
+                                } else {
+                                    // Only as a last resort, fall back to user agent sniffing
+                                    var UA = navigator.userAgent;
+                                    hasTouchScreen = (
+                                        /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+                                        /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+                                    );
+                                }
+                            }
+                            if (hasTouchScreen)
+                              //  window.alert("touchScreen!");
+                                $('#warningNoKeyb').modal('show');
+                        });
+                    </script>
+</body>
+
+</html>
